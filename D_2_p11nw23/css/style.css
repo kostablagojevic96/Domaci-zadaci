@@ -1,0 +1,65 @@
+body{
+    padding: 80px;
+}
+form{
+    width: 600px;
+    margin-top: 80px;
+    margin: 0 auto;
+    background-color: rgb(206, 195, 206);
+}
+input{
+    margin-left: 50px;
+    margin-bottom: 10px;   
+    display: inline-block;
+    margin-top: 5px;
+}
+fieldset>div{
+    padding: 0px 50px;
+}
+label{
+    margin: 5px 0px;
+    display: inline-block;
+}
+.feedback{
+    margin-left: 50px;
+    
+}
+.feedback label{
+    margin-left: -50px;
+}
+form label{
+    margin-left: 50px;
+}
+#button{
+    margin-top: -5px;
+}
+#last{
+    margin-left: 40px;
+    margin-top: 5px;
+}
+#last input{
+    margin-bottom: 5px;
+}
+#login label{
+   margin: 0;
+}
+#login{
+    background-color: rgb(183, 200, 233);
+}
+input[type="checkbox"]:checked{
+    accent-color: white;
+    outline: 1px solid black;
+}
+#background{
+    background-color: rgb(183, 200, 233);
+}
+#container{
+    background-color: rgb(183, 200, 233);
+}
+
+
+
+
+
+
+

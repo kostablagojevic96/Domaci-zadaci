@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forma za domaci</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <form action="forma za domaci">
+        <fieldset id="login">
+            <legend>Login details</legend>
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" />
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" />
+            </div>
+            <div>
+                <label for="pass">Password:</label>
+                <input type="password" name="pass" id="pass" />
+            </div>
+        </fieldset>
+        <fieldset id="background">
+            <legend>Your feedback</legend>
+            <div class="feedback">
+                <label for="emotions">Please check all the emotions that apply to you:</label>
+                <br />
+                Angry<input type="checkbox" name="angry" id="angry" value="true" />
+                <br />
+                Sad<input type="checkbox" name="sad" id="sad" value="true" />
+                <br />
+                Happy<input type="checkbox" name="happy" id="happy" value="true" />
+                <br />
+                Ambivalent <input type="checkbox" name="ambivalent" id="ambivalent" value="true" />
+                <br />
+            </div>
+            <div class="feedback">
+                <label for="service">How satisfied were you with our service?</label>
+                <br />
+                Very satisfied<input type="radio" name="service" id="very satisfied" value="very satisfied" />
+                <br />
+                Satisfied <input type="radio" name="service" id="satisfied" value="satisfied" />
+                <br />
+                Didn't care <input type="radio" name="service" id="didn't care" value="didn't care" />
+                <br />
+                Dissatisfied <input type="radio" name="service" id="dissatisfied" value="dissatisfied" />
+                <br />
+                Very dissatisfied <input type="radio" name="service" id="very dissatisfied" value="very dissatisfied" />
+                <br />
+            </div>
+            <label for="com">Further comments:
+                <textarea name="com" id="com" cols="20" rows="3"></textarea>
+            </label>
+        </fieldset>
+        <fieldset id="container">
+            <div id="button">
+                <br />
+                <label for="photo">Bio photo:</label>
+                <input type="file" name="photo" /><!--Ovde proveriti da li treba size staviti-->
+                <br />
+                <label for="location">Location visited:</label>
+                <select name="location" id="location">
+                    <option value="">Select location</option>
+                    <option value="bg">Beograd</option>
+                    <option value="ng">Negotin</option>
+                    <option value="sa">Sarajevo</option>
+                </select>
+                <br />
+                <div id="last">
+                    <input type="submit" value="Submit" /> <br />
+                    <input type="reset" value="reset" />
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</body>
+
+</html>
