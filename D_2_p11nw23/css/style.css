@@ -1,5 +1,6 @@
 body{
     padding: 80px;
+    background: linear-gradient(45deg, greenyellow, dodgerblue);
 }
 form{
     width: 600px;
@@ -12,6 +13,18 @@ input{
     margin-bottom: 10px;   
     display: inline-block;
     margin-top: 5px;
+    border-radius: 5px;
+}
+input:focus{
+    background-color: rgb(148, 238, 179);
+    transition: 0.6s;
+}
+textarea{
+    border-radius: 5px;
+}
+textarea:focus{
+    background-color: rgb(148, 238, 179);
+    transition: 0.6s;
 }
 fieldset>div{
     padding: 0px 50px;
@@ -32,6 +45,7 @@ form label{
 }
 #button{
     margin-top: -5px;
+    padding-left: 0px;
 }
 #last{
     margin-left: 40px;
