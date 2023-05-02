@@ -1,0 +1,30 @@
+img:hover{
+    opacity: 0.5;
+}
+p{
+    display: inline-block;
+    position: relative;
+    top: 120px
+}
+.slike{
+    width: 250px;
+    height: 300px; 
+    margin-left: 200px;
+    border: 3px solid gray;
+    margin-top: -68px;
+}
+img{
+    width:100%;
+    height: 100%;
+}
+span{
+    font-weight: bold;
+}
+.slike:nth-of-type(even):hover{
+    border: solid blue;
+}
+.slike:nth-of-type(odd):hover{
+    border: solid red;
+}
+
+
