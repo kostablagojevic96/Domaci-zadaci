@@ -23,10 +23,9 @@ while($i <= $m)
     {
         $zbir += $i;
     }
-    
     $i++;
-    $rezultat = $p - $zbir;
 }
+$rezultat = $p - $zbir;
 echo "1 a) Razlika brojeva deljivih sa 3 a ne sa 7 od brojeva deljivih sa 7 a ne sa 3 je: $rezultat";
 echo "<hr>";
 // b) Kotisteći for petlju
@@ -44,8 +43,8 @@ for($i = $n; $i <= $m; $i++)
     {
         $zbir += $i;
     }
-    $rezultat = $p - $zbir; 
 }
+$rezultat = $p - $zbir; 
 echo "1 b) Razlika brojeva deljivih sa 3 a ne sa 7 od brojeva deljivih sa 7 a ne sa 3 je: $rezultat";
 echo "<hr>";
 // Zadatak br. 2 Odrediti sumu kubova neparnih brojeva od $n do $m:
@@ -85,10 +84,16 @@ $filmovi = ["Betmen", "Coco", "Forrest Gump","Supermen", "Umri muski 1"];
 $reziseri = ["Cristopher Nolan", "Adrian Molina", "Robert Zemeckis","Richard Doner", "John McTiernan"];
 $slicice = ["slike/betmen.jpg", "slike/coco.jpg", "slike/forest_gump.jpg", "slike/supermen.jpg", "slike/umri_muski_1.jpg"];
 
+echo "<table>";
 for($i = 0; $i < count($filmovi); $i++)
 {
-    echo "<p><span>$filmovi[$i]</span><br> $reziseri[$i]</p><div class='slike'><img src ='$slicice[$i]'></div>";
+echo "<tr>";
+echo "<td><span>$filmovi[$i]</span><br><br>$reziseri[$i]</td>";
+echo "<td><img src =$slicice[$i]></td>";
+echo "</tr>";
 }
+echo "</table>";
 ?>
+
 </body>
 </html>

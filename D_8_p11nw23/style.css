@@ -1,17 +1,10 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 img:hover{
     opacity: 0.5;
-}
-p{
-    display: inline-block;
-    position: relative;
-    top: 120px
-}
-.slike{
-    width: 250px;
-    height: 300px; 
-    margin-left: 200px;
-    border: 3px solid gray;
-    margin-top: -68px;
 }
 img{
     width:100%;
@@ -20,11 +13,25 @@ img{
 span{
     font-weight: bold;
 }
-.slike:nth-of-type(even):hover{
+table, tr, td{
+    border: 2px solid gray; 
+}
+table{
+    border-collapse: collapse;
+    width: 450px;
+}
+table tr td{
+    height: 400px;
+}
+table tr td:nth-child(2){
+    width: 300px;
+}
+table tr:nth-of-type(even) td img:hover{
     border: solid blue;
 }
-.slike:nth-of-type(odd):hover{
+table tr:nth-of-type(odd) td img:hover{
     border: solid red;
 }
+
 
 
