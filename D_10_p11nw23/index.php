@@ -1,19 +1,15 @@
 <?php
 
 class TekuciRacun{
-    public $BrojRacuna;
-    public $Stanje;
-    public $Kurs;
+    private $BrojRacuna;
+    private $Stanje;
+    private $Kurs;
+
     public function setBrojRacuna($b){
         $this->BrojRacuna= $b;
     }
-    public function setStanje($s, $d){
-        if($d === "RSD"){
-            $this->Stanje= $s;
-        }
-        else{
-            $this->Stanje= $s * $this->Kurs;
-        }
+    public function setStanje($s){
+        $this->Stanje=round($s,2);
     }
     public function setKurs($k){
         $this->Kurs= $k;
@@ -22,25 +18,22 @@ class TekuciRacun{
         return $this->BrojRacuna;
     }
     public function getStanje(){
-        return $this->round((Stanje),2);
+        return $this->Stanje;
     }
     public function getKurs(){
-        return $this->round((Kurs),4);
+        return $this->Kurs;
     }
     public function uplati($iznos, $valuta){
         if($valuta === "RSD"){
-            $this->Stanje+= $iznos;
+            $this->Stanje+=round($iznos,2);
         }
         else{
             $this->Stanje+=round(($this->Kurs * $iznos),2);
         }
     }
     public function isplati($iznos, $valuta){
-        if($iznos > $this->Stanje && $iznos === RSD){
+        if($iznos > $this->Stanje && $valuta === "RSD"){
            return false;
-        }
-        elseif($iznos * $this->Kurs > $this->Stanje && $iznos === "EUR"){
-            return false;
         }
         elseif($iznos * $this->Kurs && $valuta === "EUR" > $this->Stanje){
             return false;
@@ -52,10 +45,7 @@ class TekuciRacun{
         elseif($valuta === "EUR"){
             $din = round(($this->Kurs * $iznos),2);
             $this->Stanje=$this->Stanje - $din;
-            return round(($din / $this->Kurs),2);
-        }
-        else{
-            return false;
+            return $din / $this->Kurs;
         }
     }
     public function stanje(){
@@ -105,7 +95,7 @@ echo "<hr>";
 $f2->uplati(100, "EUR");
 $f2->stanje();
 echo "<hr>";
-$f2->uplati(4000, "RSD");
+$f2->uplati(4000.2353, "RSD");
 $f2->stanje();
 echo "<hr>";
 //////////////////////////////////////////////////////////////////
