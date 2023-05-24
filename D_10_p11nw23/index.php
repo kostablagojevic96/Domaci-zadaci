@@ -40,12 +40,12 @@ class TekuciRacun{
         }
         elseif($this->Stanje >= $iznos && $valuta === "RSD"){
              $this->Stanje=$this->Stanje - $iznos;
-             return $iznos;
+             return true;
         }
         elseif($valuta === "EUR"){
             $din = round(($this->Kurs * $iznos),2);
             $this->Stanje=$this->Stanje - $din;
-            return $din / $this->Kurs;
+            return true;
         }
     }
     public function stanje(){
