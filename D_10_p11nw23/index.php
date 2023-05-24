@@ -35,7 +35,7 @@ class TekuciRacun{
         if($iznos > $this->Stanje && $valuta === "RSD"){
            return false;
         }
-        elseif($iznos * $this->Kurs && $valuta === "EUR" > $this->Stanje){
+        elseif($iznos * $this->Kurs > $this->Stanje && $valuta === "EUR"){
             return false;
         }
         elseif($this->Stanje >= $iznos && $valuta === "RSD"){
